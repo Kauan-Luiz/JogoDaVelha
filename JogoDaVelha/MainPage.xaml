@@ -7,7 +7,7 @@
     <ContentPage.Background>
         <LinearGradientBrush StartPoint="0,1" EndPoint="1,0">
             <GradientStop Color="#2C2C2C" Offset="0.8"/>
-            <GradientStop Color="#595959" Offset="0.2"/>
+            <GradientStop Color="#1E1E1E" Offset="0.2"/>
         </LinearGradientBrush>
     </ContentPage.Background>
 
@@ -15,16 +15,31 @@
         <Style TargetType="Button">
             <Setter Property="BackgroundColor" Value="Transparent"/> 
             <Setter Property="CornerRadius" Value="15"/>
-            <Setter Property="TextColor" Value="#00C4B3"/>
-            <Setter Property="FontSize" Value="80"/>
+            <Setter Property="TextColor" Value="White"/>
+            <Setter Property="FontSize" Value="70"/>
             <Setter Property="BorderWidth" Value="5"/>
             <Setter Property="BorderColor" Value="#00C4B3"/>
         </Style>
+
+        <Style TargetType="Label">
+            <Setter Property="TextColor" Value="White"/>
+            <Setter Property="FontSize" Value="15"/>
+        </Style>
+
+        <Style x:Key="EstiloPersonalizado" TargetType="Button">
+            <Setter Property="BackgroundColor" Value="Transparent"/>
+            <Setter Property="CornerRadius" Value="0"/>
+            <Setter Property="TextColor" Value="White"/>
+            <Setter Property="FontSize" Value="15"/>
+            <Setter Property="BorderWidth" Value="5"/>
+            <Setter Property="BorderColor" Value="Transparent"/>
+        </Style>
+        
     </ContentPage.Resources>
 
-    <Grid RowDefinitions="*,*,*,*" ColumnDefinitions="*,*,*" ColumnSpacing="10" RowSpacing="10" Margin="10">
-        <Label Grid.Row="0" Grid.Column="0" Text="JOGO DA VELHA"/>
-        <Button Grid.Row="0" Grid.Column="2" Text="REINICIAR A PARTIDA" Clicked="Reiniciar"/>
+    <Grid RowDefinitions="*,*,*,*" ColumnDefinitions="*,*,*" ColumnSpacing="15" RowSpacing="15" Margin="15">
+        <Label Grid.Row="0" Grid.Column="0" Text="JOGO DA VELHA" VerticalOptions="Center" Margin="15"/>
+        <Button Grid.Row="0" Grid.Column="2" Text="REINICIAR A PARTIDA" Clicked="Reiniciar" Style="{StaticResource EstiloPersonalizado}"/>
 
         <Button x:Name="btn1" Grid.Row="1" Grid.Column="0" Clicked="Button_Clicked"/>
         <Button x:Name="btn2" Grid.Row="1" Grid.Column="1" Clicked="Button_Clicked"/>
